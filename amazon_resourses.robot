@@ -47,5 +47,31 @@ Verificar o resultado da pesquisa se está listando o produto "${Produto}"
     Wait Until Element Is Visible     locator=(//span[contains(.,'${Produto}')])[2]
 
 
+# GHERKIN STEPS
+
+Dado que estou na home page do site Amazon.com.br 
+    Acessar a home page do site Amazon.com.br 
+
+Quando acessar o menu "Eletronicos"
+    Entrar no menu "Eletronicos"
+
+Então o título da página deve ficar "${Titulo}"
+    Verificar se o título da página fica "${Titulo}"    
+
+E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
+    Verificar se aparece a frase "Eletrônicos e Tecnologia"
+
+E a categoria "Computadores e Informática" deve ser exibida na página
+    Verificar se aparece a categoria "Computadores e Informática"
 
 
+#GHERKIN STEPS CASE 02
+
+Quando pesquisar pelo produto "${Produto}"
+    Digitar o nome de produto "${Produto}" no campo de pesquisa
+
+E clicar no botão de pesquisa
+    Clicar no botão de pesquisa
+    
+Então verifique o resultado da pesquisa se está listando o produto "${Produto}"
+    Verificar o resultado da pesquisa se está listando o produto "${Produto}"
